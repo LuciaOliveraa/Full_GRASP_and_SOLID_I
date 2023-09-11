@@ -33,9 +33,11 @@ namespace Full_GRASP_And_SOLID.Library
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
-            Console.WriteLine($"El costo total de la producción de la receta es {productionCost}"); //como lo agrego?
+            double productionCost = this.GetProductionCost();
+            Console.WriteLine($"El costo total de la producción de la receta es {productionCost};
         }
 
+        //copia de steps para mantener la encapsulación
         public ArrayList GetSteps() 
         {
             return new ArrayList(this.steps);
